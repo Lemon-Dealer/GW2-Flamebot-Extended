@@ -42,14 +42,14 @@ german = {
     "SLOTH MVP CC S"     : "⬗ *[**MVP** : {mvp_names}, der/die nur **{min_cc:.0f}** **CC** (**{cc_ratio:.1f}%** des Trupps) gemacht hat, ohne **Shroom** zu essen.]*",
     "SLOTH MVP CC P"     : "⬗ *[**MVP** : {mvp_names}, die nur **{min_cc:.0f}** **CC** (**{cc_ratio:.1f}%** des Trupps) gemacht haben, ohne **Shroom** zu essen.]*",
     
-    "SLOTH MVP TANTRUM S": "⬗ *[**MVP** : {mvp_names} took **{max_tantrum}** times the **tantrum**, get up champ]*",
-    "SLOTH MVP TANTRUM P": "⬗ *[**MVP** : {mvp_names} took **{max_tantrum}** times the **tantrum**, get up champ]*",
+    "SLOTH MVP TANTRUM S": "⬗ *[**MVP** : {mvp_names} hat **{max_tantrum}** mal den **Wutanfall** ausgehalten, steh auf, Champ]*",
+    "SLOTH MVP TANTRUM P": "⬗ *[**MVP** : {mvp_names} haben **{max_tantrum}** mal den **Wutanfall** ausgehalten, steh auf, Champs]*",
     
-    "LVP SLOTH SHROOM": "⬗ *[**LVP** : {lvp_names} ate **mushrooms** and left no crumbs.]*",
+    "LVP SLOTH SHROOM": "⬗ *[**LVP** : {lvp_names} haben **Pilze** gegessen und hinterließ keine Krümel.]*",
     
-    "LVP SLOTH KEV": "⬗ *[**LVP** : Blood for the blood gods! **{lvp_names}** was brutally murdered! Oh, what senseless violence!]*",
+    "LVP SLOTH KEV": "⬗ *[**LVP** : Blut für die Blutgötter! **{lvp_names}** wurde brutal ermordet! Oh, welch sinnlose Gewalt!]*",
     
-    "LVP SLOTH KEV ALIVE": "⬗ *[**LVP** : What? **{lvp_names}** survived?? What is this, a sacrifice for the pro-life movement???]*",
+    "LVP SLOTH KEV ALIVE": "⬗ *[**LVP** : Was? **{lvp_names}** hat überlebt?? Was ist das, ein opfer für die Pro-Life-Bewegung???]*",
     
     
     ################################ MATTHIAS ################################
