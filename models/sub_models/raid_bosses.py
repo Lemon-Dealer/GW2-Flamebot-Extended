@@ -42,7 +42,7 @@ class VG(Boss):
         lvplist = ""
         
         # Check for mechanics
-        msg_good_dps = self.get_lvp_dps()
+        msg_good_dps = self.get_lvp_dps_PMA()
         msg_red = self.lvp_vg_red()
         
         # Add prompts to praise if mechanics are bussin fr fr
@@ -548,7 +548,7 @@ class SLOTH(Boss):
         lvplist = ""
         
         # Check for mechanics
-        msg_good_cc = self.get_lvp_cc_boss()
+        msg_good_cc = self.get_lvp_cc_boss_PMA()
         msg_shroom = self.lvp_sloth_shroom()
         msg_Kev = self.lvp_sloth_Kev()
         
@@ -736,6 +736,7 @@ class MATTHIAS(Boss):
         # Check for mechanics
         msg_good_cc = self.lvp_cc_matthias()
         msg_sacrifice = self.lvp_matthias_sacrifice()
+        msg_good_dps = self.get_lvp_dps_PMA()
         
         # Add prompts to praise if mechanics are bussin fr fr
         if msg_good_cc:
@@ -743,6 +744,9 @@ class MATTHIAS(Boss):
             
         if msg_sacrifice:
             lvplist = lvplist + msg_sacrifice + "\n" 
+
+        if msg_good_dps:
+            lvplist = lvplist + msg_good_dps + "\n" 
            
         # Return full prompt
         return lvplist
@@ -1000,10 +1004,14 @@ class KC(Boss):
         
         # Check for mechanics
         msg_good_orb = self.lvp_orb_kc()
+        msg_good_dps = self.get_lvp_dps_PMA()
         
         # Add prompts to praise if mechanics are bussin fr fr
         if msg_good_orb:
             lvplist = lvplist + msg_good_orb + "\n" 
+
+        if msg_good_dps:
+            lvplist = lvplist + msg_good_dps + "\n" 
            
         # Return full prompt
         return lvplist
@@ -1134,7 +1142,7 @@ class XERA(Boss):
         
         # Check for mechanics
         msg_minijeu = self.lvp_minijeu()
-        msg_good_cc = self.get_lvp_cc_boss()
+        msg_good_cc = self.get_lvp_cc_boss_PMA()
         msg_button = self.lvp_xera_buttons()
         
         # Add prompts to praise if mechanics are bussin fr fr
@@ -1355,7 +1363,7 @@ class CAIRN(Boss):
         lvplist = ""
         
         # Check for mechanics
-        msg_good_dps = self.get_lvp_dps() 
+        msg_good_dps = self.get_lvp_dps_PMA() 
         msg_covid = self.lvp_cairn_covid()
         
         # Add prompts to praise if mechanics are bussin fr fr
@@ -1456,7 +1464,7 @@ class MO(Boss):
         lvplist = ""
         
         # Check for mechanics
-        msg_good_dps = self.get_lvp_dps() 
+        msg_good_dps = self.get_lvp_dps_PMA() 
         msg_good_cleave = self.lvp_mo_cleave()
         
         # Add prompts to praise if mechanics are bussin fr fr
@@ -1578,8 +1586,9 @@ class SAMAROG(Boss):
         lvplist = ""
         
         # Check for mechanics
-        msg_good_cc = self.get_lvp_cc_boss()
+        msg_good_cc = self.get_lvp_cc_boss_PMA()
         msg_tanking = self.lvp_samarog_tank()
+        msg_good_dps = self.get_lvp_dps_PMA()
         
         # Add prompts to praise if mechanics are bussin fr fr
         if msg_good_cc:
@@ -1587,6 +1596,9 @@ class SAMAROG(Boss):
             
         if msg_tanking:
             lvplist = lvplist + msg_tanking + "\n" 
+
+        if msg_good_dps:
+            lvplist = lvplist + msg_good_dps + "\n" 
 
         # Return full prompt
         return lvplist
@@ -1986,7 +1998,7 @@ class SH(Boss):
         self.mvp = self.get_mvp()
         self.lvp = self.get_lvp()
         SH.last  = self
-        
+
     def get_mvp(self):
         # Create MVP prompt
         mvplist = ""
@@ -2026,11 +2038,15 @@ class SH(Boss):
         lvplist = ""
         
         # Check for mechanics
-        msg_good_cc = self.get_lvp_cc_boss()
+        msg_good_cc = self.get_lvp_cc_boss_PMA()
+        msg_good_dps = self.get_lvp_dps_PMA()
         
         # Add prompts to praise if mechanics are bussin fr fr
         if msg_good_cc:
             lvplist = lvplist + msg_good_cc + "\n" 
+
+        if msg_good_dps:
+            lvplist = lvplist + msg_good_dps + "\n" 
 
         # Return full prompt
         return lvplist
@@ -2198,7 +2214,7 @@ class DHUUM(Boss):
         lvplist = ""
         
         # Check for mechanics
-        msg_good_dps = self.get_lvp_dps()
+        msg_good_dps = self.get_lvp_dps_PMA()
         msg_pity_bomb = self.lvp_dhuum_bomb_pity()
         
         # Add prompts to praise if mechanics are bussin fr fr
@@ -2350,7 +2366,7 @@ class CA(Boss):
         lvplist = ""
         
         # Check for mechanics
-        msg_good_dps = self.get_lvp_dps()
+        msg_good_dps = self.get_lvp_dps_PMA()
         
         # Add prompts to praise if mechanics are bussin fr fr
         if msg_good_dps:
@@ -2487,10 +2503,14 @@ class LARGOS(Boss):
         
         # Check for mechanics
         msg_lvp_cc = self.get_lvp_cc_total()
+        msg_good_dps = self.get_lvp_dps_PMA()
         
         # Add prompts to praise if mechanics are bussin fr fr
         if msg_lvp_cc:
             lvplist = lvplist + msg_lvp_cc + "\n" 
+
+        if msg_good_dps:
+            lvplist = lvplist + msg_good_dps + "\n" 
             
         # Return full prompt
         return lvplist
@@ -3024,11 +3044,15 @@ class SABIR(Boss):
         lvplist = ""
         
         # Check for mechanics
-        msg_good_cc = self.get_lvp_cc_boss()
+        msg_good_cc = self.get_lvp_cc_boss_PMA()
+        msg_good_dps = self.get_lvp_dps_PMA()
         
         # Add prompts to praise if mechanics are bussin fr fr
         if msg_good_cc:
             lvplist = lvplist + msg_good_cc + "\n" 
+    
+        if msg_good_dps:
+            lvplist = lvplist + msg_good_dps + "\n" 
         
         # Return full list    
         return lvplist
@@ -3353,7 +3377,7 @@ class GREER(Boss):
         lvplist = ""
         
         # Check for mechanics
-        msg_good_dps = self.get_lvp_dps()
+        msg_good_dps = self.get_lvp_dps_PMA()
         msg_good_cc = self.get_lvp_cc_total()
         msg_good_cleave = self.lvp_greer_cleave()
         msg_reflect_distort_placeholder = self.lvp_greer_reflect_distort()
@@ -3423,12 +3447,10 @@ class GREER(Boss):
 
             if cleave_total / boss_total > 1.03:
                 i_players.append(i)
-        try:
+        if(len(i_players))>0:
             self.add_lvps(i_players)
             lvp_names = self.players_to_string(i_players)   
             return LANGUES["selected_language"]["LVP GREER CLEAVE"].format(lvp_names=lvp_names)
-        except:
-            return
         return
     
     # Praise the people who reflect/distort/destroy projectiles
@@ -3548,7 +3570,7 @@ class DECIMA(Boss):
         lvplist = ""
         
         # Check for mechanics
-        msg_good_dps = self.get_lvp_dps()
+        msg_good_dps = self.get_lvp_dps_PMA()
         msg_good_cc = self.get_lvp_cc_total()
         msg_good_greens = self.lvp_decima_collect_greens()
         
@@ -3727,7 +3749,7 @@ class DECIMA(Boss):
         off_phase_greens = off_phase_greens + self.get_mech_value(i_player, "Absorbed Tier 2 Green", "Split 2")
         off_phase_greens = off_phase_greens + self.get_mech_value(i_player, "Absorbed Tier 3 Green", "Split 2")
         
-        if greens_done * 1.2 < off_phase_greens:
+        if greens_done < (off_phase_greens / 3):
             return True
         else:
             return False
@@ -3818,7 +3840,7 @@ class URA(Boss):
         lvplist = ""
         
         # Check for Mechanics
-        msg_good_dps = self.get_lvp_dps()
+        msg_good_dps = self.get_lvp_dps_PMA()
         msg_titanspawn = self.lvp_ura_titanspawn()
         
         # Add prompts to praise if mechanics are bussin fr fr

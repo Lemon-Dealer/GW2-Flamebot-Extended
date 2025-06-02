@@ -334,9 +334,19 @@ english_PMA = {
     "LVP BOSS CC"     : "⬗ *[**LVP** : {lvp_names} thanks for doing **{max_cc:.0f}** **CC** (**{cc_ratio:.1f}%** of the squad)]*",
     "LVP TOTAL CC"    : "⬗ *[**LVP** : {lvp_names} thanks for doing **{max_cc:.0f}** **CC** (**{cc_ratio:.1f}%** of the squad)]*",
     
+    "LVP BOSS CC PMA" : "⬗ *[**LVP** : {lvp_names} Thank you for doing **{max_cc:.0f}** total **CC** (**{cc_ratio:.1f}%** of the squad)]*",
+    
     "LVP DPS"         : "⬗ *[**LVP** : {lvp_dps_name} who did **{dps:.1f}kdps** (**{dmg_ratio:.0f}%** of the squad)]*",
     "LVP DPS FOODSWAP": "⬗ *[**LVP** : {lvp_dps_name} who did **{dps:.1f}kdps** (**{dmg_ratio:.0f}%** of the squad) with **{foodSwapCount} foodswap**.]*",
     
+    "LVP DPS 001 PMA" : "⬗ *[**LVP** : {lvp_names} did a total of **{dps:.1f}kdps** (**{dmg_ratio:.0f}%** of the squad)]*",
+    "LVP DPS 010 PMA" : "⬗ *[**LVP** : {lvp_names} did a total of **{dps:.1f}kdps** (**{dmg_ratio:.0f}%** of the squad). Nice usage of writs!]*",
+    "LVP DPS 011 PMA" : "⬗ *[**LVP** : {lvp_names} did a total of **{dps:.1f}kdps** (**{dmg_ratio:.0f}%** of the squad). {writ_names} used writs!]*",
+    "LVP DPS 100 PMA" : "⬗ *[**LVP** : {lvp_names} did a total of **{dps:.1f}kdps** (**{dmg_ratio:.0f}%** of the squad). Nice usage of food swaps!]*",
+    "LVP DPS 101 PMA" : "⬗ *[**LVP** : {lvp_names} did a total of **{dps:.1f}kdps** (**{dmg_ratio:.0f}%** of the squad). {swap_names} food swapped!]*",
+    "LVP DPS 110 PMA" : "⬗ *[**LVP** : {lvp_names} did a total of **{dps:.1f}kdps** (**{dmg_ratio:.0f}%** of the squad). {writ_names} used writs! {swap_names} food swapped!]*",
+    "LVP DPS 111 PMA" : "⬗ *[**LVP** : {lvp_names} did a total of **{dps:.1f}kdps** (**{dmg_ratio:.0f}%** of the squad). {writ_names} used writs! {swap_names} food swapped! {gamer_names} did neither!]*",
+
     ################################ TITRES ################################
     "W1"          : "## W1 - *{wing_duration}* (without pre-VG)\n",
     "W3"          : "## W3 - *{wing_duration}* (without escort)\n",

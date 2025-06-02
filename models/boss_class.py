@@ -359,6 +359,20 @@ class Boss:
                     if state[1] == 1:
                         foodSwapCount += 1
         return foodSwapCount
+    
+    # Check if person was using writs
+    def get_writ_user(self, i_player: int):
+        Cons = self.log.pjcontent["players"][i_player]['consumables']
+        for util in Cons:
+            # Writ of Masterful Strength
+            if util['id'] == 33297:
+                return True
+            # Writ of Masterful Malice
+            if util['id'] == 33836:
+                return True
+            
+        return False
+
 
     ################################ MVP ################################
     
@@ -703,7 +717,97 @@ class Boss:
         if foodSwapCount:
             return LANGUES["selected_language"]["LVP DPS FOODSWAP"].format(lvp_dps_name=lvp_dps_name, max_dmg=max_dmg, dmg_ratio=dmg_ratio, dps=dps, foodSwapCount=foodSwapCount)
         return LANGUES["selected_language"]["LVP DPS"].format(lvp_dps_name=lvp_dps_name, max_dmg=max_dmg, dmg_ratio=dmg_ratio, dps=dps)
+
+    # General function to get people who contributed a lot to CC
+    def get_lvp_cc_boss_PMA(self):
+        i_players, max_cc, total_cc = Stats.get_max_value(self, self.get_cc_boss)
+        if total_cc == 0:
+            return
+        # Collect other players who did a lot of CC
+        collective_cc = max_cc
+        for i in self.player_list:
+            if self.get_cc_boss(i) > 0.9 * max_cc:
+                if i is not i_players[0]:
+                    i_players.append(i)
+                    collective_cc = collective_cc + self.get_cc_boss(i)
+        self.add_lvps(i_players)
+        lvp_names = self.players_to_string(i_players)
+        cc_ratio  = collective_cc / total_cc * 100
+        return LANGUES["selected_language"]["LVP BOSS CC PMA"].format(lvp_names=lvp_names, max_cc=collective_cc, cc_ratio=cc_ratio)
+
+    # General function to get people who contributed a lot to DPS
+    def get_lvp_dps_PMA(self):
+        i_players, max_dmg, total_dmg = Stats.get_max_value(self, self.get_dmg_boss)
+        # Collect other players who did a lot of DPS
+        Food_Swappers = []
+        Writ_Users = []
+        Gamers = []
+        i_players = []
+        collective_DPS = 0
+        for i in self.player_list:
+            if self.get_dmg_boss(i) > 0.9 * max_dmg:
+                i_players.append(i)
+                collective_DPS = collective_DPS + self.get_dmg_boss(i) / self.duration_ms
+                # Check if person food swapped
+                if self.get_foodswap_count(i):
+                    Food_Swappers.append(i)
+                # Check if person used writs
+                if self.get_writ_user(i):
+                    Writ_Users.append(i)
+                # Otherwise, add player to fair group
+                if not(self.get_foodswap_count(i) and self.get_writ_user(i)):
+                    Gamers.append(i)
+
+        dmg_ratio  = (collective_DPS * self.duration_ms) / total_dmg * 100
+        self.add_lvps(i_players)
+        lvp_names = self.players_to_string(i_players)
+
+        # Set groups for food/utility & flags
+        gamer_flag = 0
+        writ_flag = 0
+        swap_flag = 0
+        if len(Gamers)>0:
+            gamer_names = self.players_to_string(Gamers)
+            gamer_flag = 1
+        if len(Writ_Users)>0:
+            writ_names = self.players_to_string(Writ_Users)
+            writ_flag = 10
+        if len(Food_Swappers)>0:
+            swap_names = self.players_to_string(Food_Swappers)
+            swap_flag = 100
+
+        flag = gamer_flag + writ_flag + swap_flag
         
+        # Shame the group based on food/utility situation
+        match flag:
+            # Impossible case
+            case 0:
+                return
+            # Fair DPS race, no writs or swaps
+            case 1:
+                return LANGUES["selected_language"]["LVP DPS 001 PMA"].format(lvp_names=gamer_names, dps=collective_DPS, dmg_ratio=dmg_ratio)
+            # Writ users only
+            case 10:
+                return LANGUES["selected_language"]["LVP DPS 010 PMA"].format(lvp_names=writ_names, dps=collective_DPS, dmg_ratio=dmg_ratio)
+            # Writ users AND normal people
+            case 11:
+                return LANGUES["selected_language"]["LVP DPS 011 PMA"].format(lvp_names=lvp_names, dps=collective_DPS, dmg_ratio=dmg_ratio, writ_names=writ_names)
+            # Food swappers only
+            case 100:
+                return LANGUES["selected_language"]["LVP DPS 100 PMA"].format(lvp_names=swap_names, dps=collective_DPS, dmg_ratio=dmg_ratio)
+            # Food swappers AND normal people
+            case 101:
+                return LANGUES["selected_language"]["LVP DPS 101 PMA"].format(lvp_names=lvp_names, dps=collective_DPS, dmg_ratio=dmg_ratio, swap_names=swap_names)
+            # Food swappers AND writ users
+            case 110:
+                return LANGUES["selected_language"]["LVP DPS 110 PMA"].format(lvp_names=lvp_names, dps=collective_DPS, dmg_ratio=dmg_ratio, writ_names=writ_names, swap_names=swap_names)
+            # Food swappers, writ users, normal people
+            case 111:
+                return LANGUES["selected_language"]["LVP DPS 111 PMA"].format(lvp_names=lvp_names, dps=collective_DPS, dmg_ratio=dmg_ratio, writ_names=writ_names, swap_names=swap_names, gamer_names=gamer_names)
+        
+        # Code somehow fucked up
+        return
+
     ################################ DATA BOSS ################################
     
     def get_pos_boss(self, start: int = 0, end: int = None):
