@@ -730,7 +730,7 @@ class Boss:
 
         for i in self.player_list:
             if self.get_player_death_timer(i):
-                if self.get_player_death_timer(i) / boss_dura < 0.9:
+                if self.get_player_death_timer(i) / boss_dura < 0.5:
                     buyers.append(i)
 
         # Return the necessary flame
