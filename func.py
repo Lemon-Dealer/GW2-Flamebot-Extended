@@ -140,7 +140,7 @@ def get_message_reward(logs: list, players: dict, titre="Run"):
             elif wingname == 3:
                 escort_in_run = any(boss.name == "ESCORT" for boss in wing)
                 if escort_in_run:
-                    run_message += f"## W3 - *{wing_duration}*\n"
+                    run_message += f"# W3 - *{wing_duration}*\n"
                 else:
                     run_message += LANGUES["selected_language"]["W3"].format(wing_duration=wing_duration)
                     
@@ -148,7 +148,7 @@ def get_message_reward(logs: list, players: dict, titre="Run"):
                 run_message += LANGUES["selected_language"]["W7"].format(wing_duration=wing_duration)
                 
             else:
-                run_message += f"## W{wingname} - *{wing_duration}*\n"    
+                run_message += f"# W{wingname} - *{wing_duration}*\n"    
                   
         else:
             run_message += LANGUES["selected_language"][wingname].format(wing_duration=wing_duration)
@@ -161,9 +161,9 @@ def get_message_reward(logs: list, players: dict, titre="Run"):
             if boss_percentil is not None:
                 notes_nb += 1
                 total_wingman_score += boss_percentil
-                run_message += f"* **[{boss_name}]({boss_url})** **{boss_duration} ({boss_percentil}%{EMOTE_WINGMAN})**\n"
+                run_message += f"## **[{boss_name}]({boss_url})** **{boss_duration} ({boss_percentil}%{EMOTE_WINGMAN})**\n"
             else:
-                run_message += f"* **[{boss_name}]({boss_url})** **{boss_duration}**\n"
+                run_message += f"## **[{boss_name}]({boss_url})** **{boss_duration}**\n"
             run_message = cut_text(run_message)
 
             if boss.mvp:

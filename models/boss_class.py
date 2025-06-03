@@ -683,9 +683,74 @@ class Boss:
             self.add_mvps(list(set(mvp_swift)))
             mvp_names = self.players_to_string(list(set(mvp_swift)))
             prompt += LANGUES["selected_language"]["MVP SWIFT"].format(mvp_names=mvp_names)
+            prompt += "\n"
         
         return prompt
-        
+    
+    # Check if person is using food and flame if they aren't
+    def get_no_food(self):
+
+        no_food = []
+        prompt = ""
+
+        # Find people without food
+        for i in self.player_list:
+            Cons = self.log.pjcontent["players"][i]['consumables']
+            count = 0
+            count_lim = 2
+            for util in Cons:
+                # Don't count reinforced armor or malnourished or diminished
+                if util['id'] == 9283 or util['id'] == 46587 or util['id'] == 46668:
+                    # Increase count lim to account for if they refreshed food
+                    if util['id'] == 46587:
+                        count_lim = count_lim + 1
+                    if util['id'] == 46668:
+                        count_lim = count_lim + 1
+                    continue
+                else:
+                    count = count + 1
+            # If food + util not counted, add to flame list
+            if count < count_lim:
+                no_food.append(i)
+
+        # Return the necessary flame
+        if len(no_food) > 0:
+            self.add_mvps(list(set(no_food)))
+            mvp_names = self.players_to_string(list(set(no_food)))
+            prompt += LANGUES["selected_language"]["MVP NO FOOD"].format(mvp_names=mvp_names)
+            
+        return prompt
+
+    # Flame people who die early in the fight
+    def get_buyer_POV(self):
+
+        buyers = []
+        boss_dura = self.duration_ms
+        prompt = ""
+
+        for i in self.player_list:
+            if self.get_player_death_timer(i):
+                if self.get_player_death_timer(i) / boss_dura < 0.9:
+                    buyers.append(i)
+
+        # Return the necessary flame
+        if len(buyers) > 0:
+            self.add_mvps(list(set(buyers)))
+            mvp_names = self.players_to_string(list(set(buyers)))
+            prompt += LANGUES["selected_language"]["MVP BUYER POV"].format(mvp_names=mvp_names)
+
+        return prompt
+    
+    # General flame function
+    def get_mvp_general(self):
+        prompt = ""
+
+        # Flame if no food
+        prompt = prompt + self.get_no_food() + "\n"
+        # Flame if buyer POV
+        prompt = prompt + self.get_buyer_POV() + "\n"
+
+        return prompt
     
     ################################ LVP ################################
     
@@ -777,7 +842,7 @@ class Boss:
             swap_flag = 100
 
         flag = gamer_flag + writ_flag + swap_flag
-        
+
         # Shame the group based on food/utility situation
         match flag:
             # Impossible case

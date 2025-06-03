@@ -1,6 +1,6 @@
 import json
 
-DEFAULT_LANGUAGE = "FR"
+DEFAULT_LANGUAGE = "EN_PMA"
 DEFAULT_TITLE = "Run"
 DEFAULT_INPUT_FILE = "src/input_logs.txt"
 

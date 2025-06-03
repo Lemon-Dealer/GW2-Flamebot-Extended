@@ -20,18 +20,22 @@ class VG(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_bleu= self.mvp_bleu()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_bleu:
             mvplist = mvplist + msg_bleu + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full prompt
         return mvplist
@@ -39,7 +43,7 @@ class VG(Boss):
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_dps = self.get_lvp_dps_PMA()
@@ -125,7 +129,7 @@ class GORS(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_egg = self.mvp_egg()
@@ -133,6 +137,7 @@ class GORS(Boss):
         msg_bad_dps = self.get_bad_dps()
         msg_slam = self.mvp_gorse_slam()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_egg:
@@ -148,14 +153,17 @@ class GORS(Boss):
             mvplist = mvplist + msg_slam + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full prompt
         return mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_split = self.lvp_dmg_split()
@@ -321,7 +329,7 @@ class SABETHA(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_terrorists = self.mvp_terrorists()
@@ -329,6 +337,7 @@ class SABETHA(Boss):
         msg_bad_dps = self.get_bad_dps(extra_exclude=[self.is_cannon])
         msg_flamewall = self.mvp_sab_flamewall()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_terrorists:
@@ -344,14 +353,17 @@ class SABETHA(Boss):
             mvplist = mvplist + msg_flamewall + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full prompt
         return mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_split = self.lvp_dmg_split()
@@ -518,13 +530,14 @@ class SLOTH(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_tantrum = self.mvp_tantrum()
         msg_cc = self.mvp_cc_sloth()
         msg_bad_dps = self.get_bad_dps(extra_exclude=[self.is_shroom])
         msg_bad_boons = self.get_bad_boons('Full Fight', exclude=[self.is_shroom])
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_tantrum:
@@ -537,7 +550,10 @@ class SLOTH(Boss):
             mvplist = mvplist + msg_bad_dps + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full prompt
         return mvplist
@@ -545,7 +561,7 @@ class SLOTH(Boss):
         
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_cc = self.get_lvp_cc_boss_PMA()
@@ -705,13 +721,14 @@ class MATTHIAS(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_bad_cc = self.mvp_cc_matthias()
         msg_tornado = self.mvp_matthias_tornado() 
         msg_spirit = self.mvp_matthias_spirit()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_bad_cc:
@@ -724,14 +741,17 @@ class MATTHIAS(Boss):
             mvplist = mvplist + msg_spirit + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full prompt
         return mvplist
         
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_cc = self.lvp_cc_matthias()
@@ -874,16 +894,33 @@ class ESCORT(Boss):
         ESCORT.last = self 
         
     def get_mvp(self):
+        # Create MVP prompt
+        mvplist = "**MVPs** \n"
+        
+        # Check for mechanics
         msg_mine = self.mvp_mine()
+        
+        # Add prompts to flame if mechanics are garbage
         if msg_mine:
-            return msg_mine
-        return
+            mvplist = mvplist + msg_mine + "\n" 
+            
+        # Return full prompt
+        return mvplist
        
     def get_lvp(self):
+        # Create LVP prompt
+        lvplist = "**LVPs** \n"
+
+        # Check for mechanics
         msg_tower = self.lvp_tower()
+        
+        # Add prompts to praise if mechanics are bussin fr fr
         if msg_tower:
-            return msg_tower
-        return self.lvp_glenna()
+            lvplist = lvplist + msg_tower + "\n" 
+
+        # Return full prompt
+        return lvplist
+
     
     ################################ MVP ################################
     
@@ -973,13 +1010,14 @@ class KC(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_orb = self.mvp_orb_kc()
         msg_bad_dps = self.get_bad_dps() 
         msg_pizza = self.mvp_kc_pizza()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_orb:
@@ -992,7 +1030,10 @@ class KC(Boss):
             mvplist = mvplist + msg_pizza + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full prompt
         return mvplist
@@ -1000,7 +1041,7 @@ class KC(Boss):
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_orb = self.lvp_orb_kc()
@@ -1103,7 +1144,7 @@ class XERA(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_fdp = self.mvp_fdp_xera()
@@ -1112,6 +1153,7 @@ class XERA(Boss):
         msg_red_orb = self.mvp_xera_red_orb()
         msg_bad_boons = self.get_bad_boons('Main Fight')
         msg_ribbon = self.mvp_xera_ribbon()
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_fdp:
@@ -1130,7 +1172,10 @@ class XERA(Boss):
             mvplist = mvplist + msg_ribbon + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full prompt
         return mvplist
@@ -1138,7 +1183,7 @@ class XERA(Boss):
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_minijeu = self.lvp_minijeu()
@@ -1337,12 +1382,13 @@ class CAIRN(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_tp = self.mvp_tp()
         msg_bad_dps = self.get_bad_dps()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_tp:
@@ -1352,15 +1398,18 @@ class CAIRN(Boss):
             mvplist = mvplist + msg_bad_dps + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
             
+        if msg_general:
+            mvplist = mvplist + msg_general 
+
         # Return full prompt
         return mvplist
 
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_dps = self.get_lvp_dps_PMA() 
@@ -1438,12 +1487,13 @@ class MO(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_pic = self.mvp_pic()
         msg_bad_dps = self.get_bad_dps()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_pic:
@@ -1453,7 +1503,10 @@ class MO(Boss):
             mvplist = mvplist + msg_bad_dps + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full prompt
         return mvplist
@@ -1461,7 +1514,7 @@ class MO(Boss):
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_dps = self.get_lvp_dps_PMA() 
@@ -1548,7 +1601,7 @@ class SAMAROG(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_impaled = self.mvp_impaled()
@@ -1557,6 +1610,7 @@ class SAMAROG(Boss):
         msg_outside = self.mvp_samarog_outside()
         #msg_stunned = self.mvp_samarog_stunned()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_impaled:
@@ -1575,7 +1629,10 @@ class SAMAROG(Boss):
         #    mvplist = mvplist + msg_stunned + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full prompt
         return mvplist
@@ -1583,7 +1640,7 @@ class SAMAROG(Boss):
     
     def get_lvp(self):        
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_cc = self.get_lvp_cc_boss_PMA()
@@ -1808,13 +1865,14 @@ class DEIMOS(Boss):
         
     def get_mvp(self):        
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_black = self.mvp_black()
         msg_pizza = self.mvp_pizza()
         msg_no_port = self.mvp_deimos_no_port()
         msg_bad_boons = self.get_bad_boons('Main Fight', exclude=[self.is_kiter])
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_black:
@@ -1827,14 +1885,17 @@ class DEIMOS(Boss):
             mvplist = mvplist + msg_no_port + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full prompt
         return mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_tears = self.lvp_tears()
@@ -2001,7 +2062,7 @@ class SH(Boss):
 
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_wall = self.mvp_wall()
@@ -2010,6 +2071,7 @@ class SH(Boss):
         msg_orange = self.mvp_desmina_orange()
         msg_corrupted = self.mvp_desmina_corrupted()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_bad_cc:
@@ -2028,14 +2090,17 @@ class SH(Boss):
             mvplist = mvplist + msg_corrupted + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
         
         # Return full prompt
         return mvplist
     
     def get_lvp(self):        
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_cc = self.get_lvp_cc_boss_PMA()
@@ -2181,7 +2246,7 @@ class DHUUM(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_cracks = self.mvp_cracks()
@@ -2189,6 +2254,7 @@ class DHUUM(Boss):
         msg_sucked = self.mvp_dhuum_suck()
         msg_shackle = self.mvp_dhuum_shackle()
         msg_bad_boons = self.get_bad_boons('Main Fight', exclude=[self.is_green])
+        msg_general = self.get_mvp_general()
         
          # Add prompts to flame if mechanics are garbage
         if msg_bad_dps:
@@ -2204,14 +2270,17 @@ class DHUUM(Boss):
             mvplist = mvplist + msg_shackle + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full prompt
         return mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_dps = self.get_lvp_dps_PMA()
@@ -2341,12 +2410,13 @@ class CA(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_bad_dps = self.get_bad_dps()
         msg_noblock = self.mvp_CA_armslam()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_bad_dps:
@@ -2356,14 +2426,17 @@ class CA(Boss):
             mvplist = mvplist + msg_noblock + "\n"
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
 
         # Return full prompt
         return mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_dps = self.get_lvp_dps_PMA()
@@ -2469,7 +2542,7 @@ class LARGOS(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_dash = self.mvp_dash()
@@ -2477,6 +2550,7 @@ class LARGOS(Boss):
         msg_bubble = self.mvp_largos_bubble()
         msg_boonsteal = self.mvp_largos_boonsteal()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_dash:
@@ -2492,14 +2566,17 @@ class LARGOS(Boss):
             mvplist = mvplist + msg_boonsteal + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
 
         # Return full prompt
         return mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_lvp_cc = self.get_lvp_cc_total()
@@ -2658,7 +2735,7 @@ class Q1(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_fdp = self.mvp_fdp()
@@ -2670,6 +2747,7 @@ class Q1(Boss):
         q1_lamp, _, _ = Stats.get_max_value(self, self.get_q1_lamp)
         q1_kiter, _, _ = Stats.get_max_value(self, self.get_q1_kiter)
         msg_bad_boons = self.get_bad_boons('Full Fight', exclude=q1_lamp + q1_kiter)
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_fdp:
@@ -2688,14 +2766,17 @@ class Q1(Boss):
             mvplist = mvplist + msg_port + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full list
         return mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_special_roles = self.lvp_q1_special_roles()
@@ -2880,13 +2961,14 @@ class ADINA(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_bad_dps = self.mvp_dmg_split()
         msg_blinded = self.mvp_adina_blinded()
         msg_knockback = self.mvp_adina_knockback()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_bad_dps:
@@ -2899,14 +2981,17 @@ class ADINA(Boss):
             mvplist = mvplist + msg_knockback + "\n"
 
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
             
         # Return full list
         return mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_split = self.lvp_dmg_split()
@@ -3015,13 +3100,14 @@ class SABIR(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_bad_cc = self.get_mvp_cc_boss()
         msg_shockwave_hit = self.mvp_sabir_shockwave()
         msg_big_tornado = self.mvp_sabir_big_tornado()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_bad_cc:
@@ -3034,14 +3120,17 @@ class SABIR(Boss):
             mvplist = mvplist + msg_big_tornado + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
         
         # Return full list
         return mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_cc = self.get_lvp_cc_boss_PMA()
@@ -3137,7 +3226,7 @@ class QTP(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_bad_dps = self.get_bad_dps(extra_exclude=[self.is_pylon])
@@ -3145,6 +3234,7 @@ class QTP(Boss):
         msg_tanked_arrow = self.mvp_qtp_arrow_hit()
         msg_lightning_hit = self.mvp_qtp_lightning_hit()
         msg_bad_boons = self.get_bad_boons('Full Fight', exclude=[self.is_pylon])
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_bad_dps:
@@ -3160,14 +3250,17 @@ class QTP(Boss):
             mvplist = mvplist + msg_lightning_hit + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
-        
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general
+
         # Return full list         
         return mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_cc = self.get_lvp_cc_total()
@@ -3344,7 +3437,7 @@ class GREER(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_bad_dps = self.get_bad_dps()
@@ -3352,6 +3445,7 @@ class GREER(Boss):
         msg_got_hit_on_cc = self.mvp_greer_cc_hit()
         msg_knockback = self.mvp_greer_knockback()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_bad_dps:
@@ -3367,14 +3461,17 @@ class GREER(Boss):
             mvplist = mvplist + msg_knockback + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
         
         # Return full list          
         return mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_dps = self.get_lvp_dps_PMA()
@@ -3537,7 +3634,7 @@ class DECIMA(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for mechanics
         msg_bad_dps = self.get_bad_dps()
@@ -3545,6 +3642,7 @@ class DECIMA(Boss):
         msg_no_greens = self.mvp_decima_greens()
         msg_green_greed = self.mvp_decima_green_greed()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_bad_dps:
@@ -3560,14 +3658,17 @@ class DECIMA(Boss):
             mvplist = mvplist + msg_green_greed + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
         
         # Return full list
         return  mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for mechanics
         msg_good_dps = self.get_lvp_dps_PMA()
@@ -3801,7 +3902,7 @@ class URA(Boss):
         
     def get_mvp(self):
         # Create MVP prompt
-        mvplist = ""
+        mvplist = "**MVPs** \n"
         
         # Check for Mechanics
         msg_bad_dps = self.get_bad_dps()
@@ -3811,6 +3912,7 @@ class URA(Boss):
         #msg_ura_Prison = self.mvp_ura_Prison()
         msg_ura_Exposed = self.mvp_ura_Exposed()
         msg_bad_boons = self.get_bad_boons('Full Fight')
+        msg_general = self.get_mvp_general()
         
         # Add prompts to flame if mechanics are garbage
         if msg_ura_Shard:
@@ -3830,14 +3932,17 @@ class URA(Boss):
             mvplist = mvplist + msg_bad_dps + "\n" 
             
         if msg_bad_boons:
-            mvplist = mvplist + msg_bad_boons + "\n" 
+            mvplist = mvplist + msg_bad_boons
+
+        if msg_general:
+            mvplist = mvplist + msg_general 
         
         # Return full list
         return  mvplist
     
     def get_lvp(self):
         # Create LVP prompt
-        lvplist = ""
+        lvplist = "**LVPs** \n"
         
         # Check for Mechanics
         msg_good_dps = self.get_lvp_dps_PMA()
