@@ -53,13 +53,17 @@ def main(input_file, **kwargs) -> None:
     #print("\n")
 
     # Remove all blanks from the text and print
-    text = split_run_message[0]
-    text = "".join([s for s in text.strip().splitlines(True) if s.strip()])
-    print(text)
+    for i in range(len(split_run_message)):
+        text = split_run_message[i]
+        text_out = "".join([s for s in text.strip().splitlines(True) if s.strip()])
+        print(text_out)
 
     # Write to text file
-    #with open("Flame_Output.txt", "w") as f:        
-    #    f.write(text)
+    #with open("Flame_Output.txt", "w") as f: 
+    #    for i in range(len(split_run_message)): 
+    #        text = split_run_message[i]
+    #        text_out = "".join([s for s in text.strip().splitlines(True) if s.strip()])      
+    #        f.write(text_out)
 
 if __name__ == "__main__":
     print("Starting\n")
