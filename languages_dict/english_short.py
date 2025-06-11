@@ -295,8 +295,8 @@ english_short = {
     "WOJ MVP CHAINS": "* {mvp_name} took **{max_dmg}** damage from **chains** (**{ratio:.1f}%** of the squad)",
     
     ################################ AH ################################
-    "AH MVP EXPOSED S": "* {mvp_names} cummulated **{max_exposed}** **exposed** effects",
-    "AH MVP EXPOSED P": "* {mvp_names} cummulated **{max_exposed}** **exposed** effects",
+    "AH MVP EXPOSED": "* {mvp_names} got **exposed**",
+    "AH MVP GREEN": "* {mvp_names} no green.",
     
     ################################ KO ################################
     "KO MVP DEBIL S": "* {mvp_names} cummulated **{max_debil}** **debilitated** effects",
@@ -326,7 +326,11 @@ english_short = {
     "MVP PROT": "* {mvp_names} no protection",
     "MVP REGEN": "* {mvp_names} no regeneration",
     "MVP SWIFT": "* {mvp_names} no swiftness",
-    
+
+    "MVP QUICK MERGED": "* {mvp_names} no quick & other boon(s)",
+    "MVP ALAC MERGED": "* {mvp_names} no alac & other boon(s)", 
+    "MVP BOON MERGED": "* {mvp_names} no generic boon(s)",
+
     "MVP BOON SETUP": "* {mvp_names} squad boons are weird",
     
     "MVP BOON SETUP NO COM": "* Squad boons are weird",
