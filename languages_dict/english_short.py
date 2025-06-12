@@ -251,7 +251,7 @@ english_short = {
     "LVP GREER CLEAVE": "* Thank you {lvp_names} focused adds",
     
     "LVP GREER REFLECT DISTORT": "* Some people hopefully did reflects",
-    
+    "LVP GREER REFLECT": "* {lvp_names} did reflects",
     
     ################################ DECIMA ################################
     

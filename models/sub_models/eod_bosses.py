@@ -17,8 +17,6 @@ class AH(Boss):
         self.lvp = self.get_lvp()
         AH.last  = self
 
-        print(self.log.pjcontent['targets'][2])
-        
     def get_mvp(self):
         # Create MVP prompt
         mvplist = "**MVPs** \n"

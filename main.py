@@ -54,6 +54,7 @@ def main(input_file, **kwargs) -> None:
         text_out = "".join([s for s in text.strip().splitlines(True) if s.strip()])
         print(text_out)
 
+
     # Write to text file
     with open("Flame_Output.txt", "w") as f: 
         for i in range(len(split_run_message)): 

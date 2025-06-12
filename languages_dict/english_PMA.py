@@ -251,7 +251,7 @@ english_PMA = {
     "LVP GREER CLEAVE": "* Thank you {lvp_names} for focusing down the adds!",
     
     "LVP GREER REFLECT DISTORT": "* Unfortunately, due to my lack of knowledge of log reading and general disinterest, people who reflect/destroy/distort projectiles/mechanics can't be determined. This message is generated to these nameless heroes who get rid of half of the fight for others. You know who you are.",
-    
+    "LVP GREER REFLECT": "* Thank you {lvp_names} for bringing reflects/projectile defense.",
     
     ################################ DECIMA ################################
     

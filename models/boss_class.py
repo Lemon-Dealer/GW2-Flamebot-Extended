@@ -377,6 +377,9 @@ class Boss:
             # Writ of Masterful Malice
             if util['id'] == 33836:
                 return True
+            # Writ of Learned Malice
+            if util['id'] == 31959:
+                return True
             
         return False
 

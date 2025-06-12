@@ -251,7 +251,7 @@ english = {
     "LVP GREER CLEAVE": "* Thank you {lvp_names} for focusing down the adds while all other non-healers were tunnel visioned on the boss.",
     
     "LVP GREER REFLECT DISTORT": "* Unfortunately, due to my lack of knowledge of log reading and general disinterest, people who reflect/destroy/distort projectiles/mechanics can't be determined. This message is generated to these nameless heroes who get rid of half of the fight for others. You know who you are.",
-    
+    "LVP GREER REFLECT": "* Thank you {lvp_names} for carrying these casuals with your reflects/projectile defense.",
     
     ################################ DECIMA ################################
     
@@ -267,7 +267,7 @@ english = {
     "MVP DECIMA GREEN GREED P": "* {mvp_names} chose to DPS greed over collecting **greens** in Phase 2 & 3. But hey, at least they know how to do it because for some reason they could collect them in the split phases where the boss doesn't take damage!",
    
     "LVP DECIMA GREEN": "* You should all thank __{lvp_names}__ for collecting **{greens} green ticks** (which was **{ratio:.1f}%** of the squad).",   
-   
+  
    
    ################################ URA ################################
     

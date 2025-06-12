@@ -3474,10 +3474,10 @@ class GREER(Boss):
         lvplist = "**LVPs** \n"
         
         # Check for mechanics
-        msg_good_dps = self.get_lvp_dps_PMA()
+        msg_good_dps = self.get_lvp_dps_PMA(3)
         msg_good_cc = self.get_lvp_cc_total()
         msg_good_cleave = self.lvp_greer_cleave()
-        msg_reflect_distort_placeholder = self.lvp_greer_reflect_distort()
+        msg_reflect_distort_placeholder = self.lvp_greer_reflect()
         
         # Add prompts to praise if mechanics are bussin fr fr
         if msg_good_dps:
@@ -3550,9 +3550,14 @@ class GREER(Boss):
             return LANGUES["selected_language"]["LVP GREER CLEAVE"].format(lvp_names=lvp_names)
         return
     
-    # Praise the people who reflect/distort/destroy projectiles
-    def lvp_greer_reflect_distort(self):
-        return LANGUES["selected_language"]["LVP GREER REFLECT DISTORT"]
+    # Praise the people who reflect/destroy projs
+    def lvp_greer_reflect(self):
+        i_players = self.get_greer_reflect()
+        print(i_players)
+        if(len(i_players))>0:
+            self.add_lvps(i_players)
+            lvp_names = self.players_to_string(i_players)  
+            return LANGUES["selected_language"]["LVP GREER REFLECT"].format(lvp_names=lvp_names)
     
     ################################ CONDITIONS ################################
     
@@ -3589,6 +3594,35 @@ class GREER(Boss):
             return True
         else:
             return False
+        
+    # Check if player reflected/destroyed projectiles a ton
+    def got_greer_reflect(self, i_player: int):
+        # Go through the rotation
+        for i in range(len(self.log.pjcontent['players'][i_player]['rotation'])):
+            # Rev Bubble 
+            if self.log.pjcontent['players'][i_player]['rotation'][i]['id'] == 29310:
+                return i_player  
+            # Feedback
+            if self.log.pjcontent['players'][i_player]['rotation'][i]['id'] == 10302:
+                return i_player  
+            # CPC
+            if self.log.pjcontent['players'][i_player]['rotation'][i]['id'] == 10689:
+                return i_player  
+            # Firebrand F3 bubble
+            if self.log.pjcontent['players'][i_player]['rotation'][i]['id'] == 41836:
+                return i_player  
+            # Guard shield 5
+            if self.log.pjcontent['players'][i_player]['rotation'][i]['id'] == 9091:
+                return i_player  
+            # Guard shield avenger utility
+            if self.log.pjcontent['players'][i_player]['rotation'][i]['id'] == 9182:
+                return i_player
+            # Guard Wall
+            if self.log.pjcontent['players'][i_player]['rotation'][i]['id'] == 9251:
+                return i_player   
+            # Add more whenever you feel like, i can think of a few but who uses those on greer lmao
+
+        return
     
     ################################ DATA MECHAS ################################
     
@@ -3615,6 +3649,14 @@ class GREER(Boss):
             if self.got_greer_knockback(i):
                 afk_players.append(i)
         return afk_players
+    
+    # Collect all the people that did a lot of reflect in the encounter    
+    def get_greer_reflect(self):
+        supports = []
+        for i in self.player_list:
+            if self.got_greer_reflect(i):
+                supports.append(i)
+        return supports
     
 ################################ DECIMA ################################
 
