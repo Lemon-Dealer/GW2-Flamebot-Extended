@@ -355,6 +355,9 @@ english_short = {
     "LVP DPS 110 PMA" : "* {lvp_names} did a total **{dps:.1f}kdps** (**{dmg_ratio:.0f}%**). {writ_names} used writs! {swap_names} food swapped!",
     "LVP DPS 111 PMA" : "* {lvp_names} did a total **{dps:.1f}kdps** (**{dmg_ratio:.0f}%**). {gamer_names} neither used writs like {writ_names} or food swapped like {swap_names}",
 
+    "LVP BDPS PMA S" : "* {lvp_names} did **{dps:.1f}kdps** as **bdps** (**{dmg_ratio:.0f}%** of top DPS)",
+    "LVP BDPS PMA P" : "* {lvp_names} did in total **{dps:.1f}kdps** as **bdps** (**{dmg_ratio:.0f}%** of the squad)",
+
     ################################ TITRES ################################
     "W1"          : "## W1 - *{wing_duration}* (without pre-VG)\n",
     "W3"          : "## W3 - *{wing_duration}* (without escort)\n",
@@ -363,10 +366,10 @@ english_short = {
     "EOD"         : "## EoD Strikes - *{wing_duration}*\n",
     "SOTO"        : "## SotO Strikes - *{wing_duration}*\n",
     "FRAC"        : "## Fractals - *{wing_duration}*\n",
-    "MVP"         : "# [GREAT MVP : {mvps} with {max_mvp_score} titles]\n",
-    "LVP"         : "# [GREAT LVP : {lvps} with {max_lvp_score} titles]\n",
-    "TIME"        : "# Total time : {run_duration}\n",
-    "WINGMAN"     : "# Average wingman grade : {note_wingman:.2f}%{emote_wingman}",
+    "MVP"         : "## [GREAT MVP : {mvps} with {max_mvp_score} titles]\n",
+    "LVP"         : "## [GREAT LVP : {lvps} with {max_lvp_score} titles]\n",
+    "TIME"        : "## Total time : {run_duration}\n",
+    "WINGMAN"     : "## Average wingman grade : {note_wingman:.2f}%{emote_wingman}",
     
     "MALVEILLANCE": "Ongoing malevolence...",
     "UPLOAD"      : "### *Upload by"

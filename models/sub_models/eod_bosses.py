@@ -54,10 +54,14 @@ class AH(Boss):
         # Check for mechanics
         msg_good_dps = self.get_lvp_dps_PMA(14)
         msg_good_cc = self.get_lvp_cc_cleave_PMA()
+        msg_good_bdps = self.get_lvp_bdps_PMA(14)
 
         # Add prompts to praise if mechanics are bussin fr fr
         if msg_good_dps:
             lvplist = lvplist + msg_good_dps + "\n" 
+
+        if msg_good_bdps:
+            lvplist = lvplist + msg_good_bdps + "\n" 
 
         if msg_good_cc:
             lvplist = lvplist + msg_good_cc + "\n" 

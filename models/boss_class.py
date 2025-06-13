@@ -988,6 +988,45 @@ class Boss:
         
         # Code somehow fucked up
         return
+    
+    # General function to get boondps who do well
+    def get_lvp_bdps_PMA(self, targets: int=1):
+        # Find max damage and total damage
+        max_dmg = 0
+        total_dmg = 0
+        for i in self.player_list:
+            total_dmg += self.get_dmg_cleave(i,targets)
+            if self.get_dmg_cleave(i,targets) > max_dmg:
+                max_dmg = self.get_dmg_cleave(i,targets)
+
+        # Collect gamer bdps
+        i_players = []
+        collective_DPS = 0
+        for i in self.player_list:
+            # If no boon, skip
+            if not (self.is_alac(i) or self.is_quick(i)):
+                continue
+            # If healer, skip
+            if self.is_heal(i):
+                continue
+            # Check if bdps did dps
+            if self.get_dmg_cleave(i,targets) > 0.75 * max_dmg:
+                i_players.append(i)
+                collective_DPS = collective_DPS + self.get_dmg_cleave(i,targets) / self.duration_ms
+
+        dmg_ratio  = (collective_DPS * self.duration_ms) / total_dmg * 100
+        söder_ratio  = (collective_DPS * self.duration_ms) / max_dmg * 100
+        self.add_lvps(i_players)
+        lvp_names = self.players_to_string(i_players)
+
+        # Praise people if they exist. Descartes moment
+        if len(i_players) == 1:
+            return LANGUES["selected_language"]["LVP BDPS PMA S"].format(lvp_names=lvp_names, dps=collective_DPS, dmg_ratio=söder_ratio)
+        if len(i_players) > 1:
+            return LANGUES["selected_language"]["LVP BDPS PMA P"].format(lvp_names=lvp_names, dps=collective_DPS, dmg_ratio=dmg_ratio)
+
+        # No bitches
+        return
 
     ################################ DATA BOSS ################################
     

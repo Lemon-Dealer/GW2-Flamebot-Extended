@@ -1,61 +1,72 @@
 # Run
 # 08/06/2025
-## W3 - *11m08s* (without escort)
-## **[KC CM](https://dps.report/acZY-20250608-214139_kc)** **4m25s (93%:wing:)**
+## W7 - *13m59s* (without gate)
+## **[ADINA CM](https://dps.report/hLRH-20250608-201006_adina)** **3m11s (95%:wing:)**
 **MVPs** 
-* __Popcorncarry__ gave **6 orbs** to the **boss**
-* __Fuwawa Ábyssgard__ / __Hog Ridaaah__ / __Choco Sweat Licker__ / __Otohime The Dragon__ / __Popcorncarry__ as **DPS** did as much **damage** as __Stolenachievements__ who is **support** as a reminder
-* __Hog Ridaaah__ / __Mesmerizing Minty__ / __Choco Sweat Licker__ / __Popcorncarry__ / __Syregoon__ got hit by pizza attack a little too many times.
+* __Fuwawa Ábyssgard__ only did **9.6%** damage on split, what a skill-saver
 **LVPs** 
-* __Amadila Dur__ / __Hog Ridaaah__ with **14** orbs collected, what a team player
-* __Amadila Dur__ / __Stolenachievements__ did a total of **57.8kdps** (**28%** of the squad). Nice usage of writs!
-## **[XERA](https://dps.report/js1z-20250608-214817_xera)** **4m28s (87%:wing:)**
+* __Fairy Raspberry__ thanks for doing **17.5%** damage on split
+* __Stolenachievements__ is pumping **17.3kdps** as **boondps** (**94%** of the top DPS)
+## **[SABIR CM](https://dps.report/QvNk-20250608-201518_sabir)** **3m42s (84%:wing:)**
 **MVPs** 
-* __Amadila Dur__ / __Fuwawa Ábyssgard__ / __Hog Ridaaah__ / __Rrragnarök__ / __Choco Sweat Licker__ / __Otohime The Dragon__ / __Popcorncarry__ didn't do any **CC**
-* __Disabled Code__ got hit by a little too many **red orbs**.
+* __Syregoon__ only did **2300** **CC** (**4.1%** of the squad)
+* __Mesmerizing Minty__ / __Disabled Code__ / __Popcorncarry__ got hit by the **shockwave**. Pick them up fast!
+* __Syregoon__ could not resist tasting that sweet **orange flavored tornado**. Yummers!!!
 * __Syregoon__ please work on your **Quickness** uptime! It makes everyone attack faster, therefore resulting in a faster and safer encounter!
-* __Disabled Code__ please work on your **Alacrity** uptime! It makes skill recharges faster, therefore people can use their high impact skills more often!
 **LVPs** 
-* __Rrragnarök__ / __Popcorncarry__ / __Syregoon__ thanks for **not** skipping any mini-game, you are the best.
-* __Disabled Code__ Thank you for doing **1530** total **CC** (**51.5%** of the squad)
-* __Choco Sweat Licker__ / __Otohime The Dragon__ / __Popcorncarry__ thank you for doing **buttons** so others may greed **DPS**.## W2 - *13m18s*
-## **[SLOTH](https://dps.report/rnca-20250608-215155_sloth)** **2m00s (93%:wing:)**
+* __Mesmerizing Minty__ / __Disabled Code__ Thank you for doing **21997** total **CC** (**38.8%** of the squad)
+* __Altheana Dur__ did a total of **23.3kdps** (**16%** of the squad)
+* __Stolenachievements__ is pumping **20.9kdps** as **boondps** (**90%** of the top DPS)
+## **[QTP](https://dps.report/BPO6-20250608-202051_qpeer)** **4m17s (84%:wing:)**
 **MVPs** 
-* __Choco Sweat Licker__ contributed little to **400** **CC** (**2.1%** of the squad) without eating **shroom**.
-* __Amadila Dur__ / __Fuwawa Ábyssgard__ / __Choco Sweat Licker__ / __Otohime The Dragon__ as **DPS** did as much **damage** as __Stolenachievements__ who is **support** as a reminder
-**LVPs** 
-* __Disabled Code__ Thank you for doing **5778** total **CC** (**31.0%** of the squad)
-* __Hog Ridaaah__ / __Popcorncarry__ ate **mushrooms** and left no crumbs.
-## **[MATTHIAS](https://dps.report/QOTe-20250608-220243_matt)** **2m11s (90%:wing:)**
+* __Choco Sweat Licker__ / __Mordof Ganzol__ as **DPS** did as much **damage** as __Stolenachievements__ who is **support** as a reminder
+* __Mordof Ganzol__ didn't do any **CC**
+* __Choco Sweat Licker__ got hit by the arrow mechanic. Remember, you can jump them. Work on your timing next time!
+* __Mesmerizing Minty__ / __Disabled Code__ got hit by **orange circle AoE lightning hits**. Please move out, or dodge them the next time.**LVPs** 
+* __Disabled Code__ thanks for doing **6134** **CC** (**44.9%** of the squad)
+## W6 - *17m16s*
+## **[CA CM](https://dps.report/ylNt-20250608-202407_ca)** **2m14s (83%:wing:)**
 **MVPs** 
-* __Amadila Dur__ / __Stolenachievements__ / __Popcorncarry__ didn't **CC** without being **sacrified**.
-* __Amadila Dur__ / __Mio Armpit Sniffer__ stepped into a **Spirit**. It is okay, last phase is very chaotic! Don't give up!
-* __Stolenachievements__ please work on your **Quickness** uptime! It makes everyone attack faster, therefore resulting in a faster and safer encounter!
+* __Choco Sweat Licker__ / __Viadazz Fiendclaw__ as **DPS** did as much **damage** as __Syregoon__ who is **support** as a reminder
 **LVPs** 
-* __Mesmerizing Minty__ thanks for the **1960** **CC** (**44.2%** of the squad, Kudos to you)
-* __Amadila Dur__ did a total of **30.8kdps** (**16%** of the squad). Nice usage of writs!
-## W1 - *15m45s* (without pre-VG)
-## **[VG](https://dps.report/jwsD-20250608-220728_vg)** **2m03s (91%:wing:)**
+* __Amadila Dur__ did a total of **43.8kdps** (**17%** of the squad). Nice usage of writs!
+## **[LARGOS CM](https://dps.report/ovL9-20250608-203042_twins)** **3m48s (99%:wing:)**
 **MVPs** 
-* __Gold Nightmare__ unfortunately got teleported by the blue circles **3** times. They will do better next time!
-* __Gold Nightmare__ please work on your **Protection** uptime! It reduces strike damage your group takes, therefore people may survive longer and you will need to heal less!
+* __Altheana Dur__ / __Stella Novum__ took **8 dash**, it hurts
+* __Choco Sweat Licker__ stayed inside **tornadoes** for a while
 **LVPs** 
-* __Fuwawa Ábyssgard__ / __Hog Ridaaah__ / __Stolenachievements__ / __Popcorncarry__ did a total of **102.5kdps** (**58%** of the squad). __Hog Ridaaah__ / __Stolenachievements__ / __Popcorncarry__ used writs!
-* __Zeryuana Dur__ / __Brincz__ Thank you for killing **Red Guardian**. You are the best!## **[GORSEVAL](https://dps.report/bU7d-20250608-221611_gors)** **2m04s (83%:wing:)**
+* __Disabled Code__ thanks for doing **2740** **CC** (**39.1%** of the squad)
+* __Otohime The Dragon__ / __Stolenachievements__ / __Popcorncarry__ did a total of **63.6kdps** (**40%** of the squad). Nice usage of writs!
+* __Stolenachievements__ is pumping **20.6kdps** as **boondps** (**91%** of the top DPS)
+## **[QADIM CM](https://dps.report/pFyu-20250608-203854_qadim)** **6m05s (92%:wing:)**
 **MVPs** 
-* __Popcorncarry__ got **egged**.
-* __Hog Ridaaah__ / __Fairy Raspberry__ / __Popcorncarry__ as **DPS** did as much **damage** as __Stolenachievements__ who is **support** as a reminder
-* __Syregoon__ forgot to use their **food** and/or **utility**! Please make sure that you refresh before the next boss!
+* __Stolenachievements__ stood on the boss and did not hit the **pyre**, wtf man
+* __Mesmerizing Minty__ / __Óuro Kronii__ / __Syregoon__ took **2 shockwave**, bind that dodge key please
+* __Fuwawa Ábyssgard__ got hit by **fire drops**.
+* __Stella Novum__ / __Disabled Code__ stood inside the hitbox. Please stay a bit further away.
+* __Óuro Kronii__ forgot to use their **food** and/or **utility**! Please make sure that you refresh before the next boss!
 **LVPs** 
-* __Fuwawa Ábyssgard__ with **16.8%** damage on **split** as **DPS**! Thank you, gamer!
-## **[SABETHA](https://dps.report/t1T7-20250608-222107_sab)** **3m06s (86%:wing:)**
+* Give it up to today's **lamp** & **kite** roles __Fairy Lightning__ / __Stella Novum__ / __Do Not The Dur__! Without them you would be stuck at least 30 minutes in LFG.## W5 - *25m30s*
+## **[SH CM](https://dps.report/jm1O-20250608-204314_sh)** **2m13s (91%:wing:)**
 **MVPs** 
-* __Fairy Raspberry__ / __Popcorncarry__ **exploded** a bomb on his **teammates**. Hope everything went alright, regardless!
-* __Hog Ridaaah__ as **DPS** did as much **damage** as __Stolenachievements__ who is **support** as a reminder
+* __Kiara Waldlicht__ / __Stella Novum__ / __Mordof Ganzol__ didn't do any **CC**
+* __Kiara Waldlicht__ who tried to taste a **wall**, was not delectable
+* __Fairy Nightmare__ / __Stella Novum__ / __Blessed Lucy__ / __Mordof Ganzol__ / __Syregreen__ got corrupted multiple times. Hope everything still went alright.
 **LVPs** 
-* __Amadila Dur__ with **17.0%** damage on **split** as **DPS**. Great job!
-* __Fuwawa Ábyssgard__ / __Fairy Raspberry__ Thank you for doing **cannons**. These other AFK **DPS** players could never.
-# [GREAT MVP : popcorncarry with 8 titles]
-# [GREAT LVP : Dur with 5 titles]
-# Total time : 43m58s
-# Average wingman grade : 89.00%:wing:
+* __Disabled Code__ Thank you for doing **3000** total **CC** (**62.1%** of the squad)
+* __Stella Novum__ / __Stolenachievements__ / __Zeryuana Dur__ / __Blessed Lucy__ / __Mordof Ganzol__ did a total of **171.9kdps** (**64%** of the squad). __Stella Novum__ / __Stolenachievements__ / __Blessed Lucy__ used writs!
+* __Stolenachievements__ / __Syregreen__ are pumping **63.0kdps** as **boondps** (**24%** of the squad)
+## **[DHUUM CM](https://dps.report/tsnb-20250608-210625_dhuum)** **6m47s (65%:wing:)**
+**MVPs** 
+* __Wora Chique__ as **DPS** did as much **damage** as __Rrragnarök__ who is **support** as a reminder
+* __Cait The Silent__ / __Mio Armpit Sniffer__ / __Syregreen__ / __Wora Chique__ took **1 cracks**, turn on your monitor chief
+* __Roxy Migûrdia__ / __Rrragnarök__ / __Wora Chique__ took damage from Dhuum's AoE in the middle during **Greater Death Mark** (a.k.a. suck).
+* __Syregreen__ please work on your **Quickness** uptime! It makes everyone attack faster, therefore resulting in a faster and safer encounter!
+* __Roxy Migûrdia__ / __Disabled Code__ please work on your **Alacrity** uptime! It makes skill recharges faster, therefore people can use their high impact skills more often!
+* __Disabled Code__ forgot to use their **food** and/or **utility**! Please make sure that you refresh before the next boss!**LVPs** 
+* __Altheana Dur__ / __Stella Novum__ / __Mio Armpit Sniffer__ did a total of **38.3kdps** (**43%** of the squad). __Stella Novum__ / __Mio Armpit Sniffer__ used writs!
+* __Stella Novum__ / __Spectralcorn__ won the **bomb** lottery today and sure got a lot of them! Thank you for not bombing us!
+## [GREAT MVP : BluenoBaka with 10 titles]
+## [GREAT LVP : kopro with 6 titles]
+## Total time : 59m34s
+## Average wingman grade : 86.62%:wing:
