@@ -778,6 +778,10 @@ class Boss:
 
         # Find people without food
         for i in self.player_list:
+            # Skip healers
+            if self.is_heal(i):
+                continue
+            
             # Check if a skill issue negative amount of food was used
             Con_check = list(self.log.pjcontent["players"][i].keys())
             if "consumables" not in Con_check:

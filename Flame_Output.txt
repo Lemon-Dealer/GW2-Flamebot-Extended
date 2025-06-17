@@ -1,72 +1,30 @@
 # Run
-# 08/06/2025
-## W7 - *13m59s* (without gate)
-## **[ADINA CM](https://dps.report/hLRH-20250608-201006_adina)** **3m11s (95%:wing:)**
+# 15/06/2025
+## W7 - *17m45s* (without gate)
+## **[SABIR CM](https://dps.report/rFaF-20250615-091716_sabir)** **4m13s (48%:wing:)**
 **MVPs** 
-* __Fuwawa Ábyssgard__ only did **9.6%** damage on split, what a skill-saver
+* __Eisbær__ only did **2727** **CC** (**4.6%** of the squad)
+* __Eisbær__ / __ThirdOrigin__ got hit by the **shockwave**. Pick them up fast!
+* __Rem__ forgot to use their **food** and/or **utility**! Please make sure that you refresh before the next boss!
 **LVPs** 
-* __Fairy Raspberry__ thanks for doing **17.5%** damage on split
-* __Stolenachievements__ is pumping **17.3kdps** as **boondps** (**94%** of the top DPS)
-## **[SABIR CM](https://dps.report/QvNk-20250608-201518_sabir)** **3m42s (84%:wing:)**
+* __Samara__ Thank you for doing **20728** total **CC** (**34.6%** of the squad)
+* __Arrow Of Fatality__ / __Rem__ did a total of **53.6kdps** (**42%** of the squad). __Arrow Of Fatality__ used writs!
+## **[ADINA](https://dps.report/B4cQ-20250615-092321_adina)** **3m34s (75%:wing:)**
 **MVPs** 
-* __Syregoon__ only did **2300** **CC** (**4.1%** of the squad)
-* __Mesmerizing Minty__ / __Disabled Code__ / __Popcorncarry__ got hit by the **shockwave**. Pick them up fast!
-* __Syregoon__ could not resist tasting that sweet **orange flavored tornado**. Yummers!!!
-* __Syregoon__ please work on your **Quickness** uptime! It makes everyone attack faster, therefore resulting in a faster and safer encounter!
+* __Eisbær__ only did **4.9%** damage on split, what a skill-saver
+* __Arrow Of Fatality__ / __Eisbær__ / __ThirdOrigin__ / __Zplatters__ / __Rem__ / __Kev Shackleshot__ / __Maybe Momo__ / __Qahnur__ / __Zarek Bertolli__ got **blinded**.
+* __Qahnur__ got hit by a **knockback**.
+* __ThirdOrigin__ please work on your **Quickness** uptime! It makes everyone attack faster, therefore resulting in a faster and safer encounter!
 **LVPs** 
-* __Mesmerizing Minty__ / __Disabled Code__ Thank you for doing **21997** total **CC** (**38.8%** of the squad)
-* __Altheana Dur__ did a total of **23.3kdps** (**16%** of the squad)
-* __Stolenachievements__ is pumping **20.9kdps** as **boondps** (**90%** of the top DPS)
-## **[QTP](https://dps.report/BPO6-20250608-202051_qpeer)** **4m17s (84%:wing:)**
+* __Arrow Of Fatality__ thanks for doing **20.1%** damage on split
+## **[QTP CM](https://dps.report/ysSO-20250615-093035_qpeer)** **5m19s (80%:wing:)**
 **MVPs** 
-* __Choco Sweat Licker__ / __Mordof Ganzol__ as **DPS** did as much **damage** as __Stolenachievements__ who is **support** as a reminder
-* __Mordof Ganzol__ didn't do any **CC**
-* __Choco Sweat Licker__ got hit by the arrow mechanic. Remember, you can jump them. Work on your timing next time!
-* __Mesmerizing Minty__ / __Disabled Code__ got hit by **orange circle AoE lightning hits**. Please move out, or dodge them the next time.**LVPs** 
-* __Disabled Code__ thanks for doing **6134** **CC** (**44.9%** of the squad)
-## W6 - *17m16s*
-## **[CA CM](https://dps.report/ylNt-20250608-202407_ca)** **2m14s (83%:wing:)**
-**MVPs** 
-* __Choco Sweat Licker__ / __Viadazz Fiendclaw__ as **DPS** did as much **damage** as __Syregoon__ who is **support** as a reminder
+* __Eisbær__ didn't do any **CC**
+* __Eisbær__ / __Zahnur__ got hit by the arrow mechanic. Remember, you can jump them. Work on your timing next time!
+* __Eisbær__ / __ThirdOrigin__ / __Rem__ / __Zahnur__ got hit by **orange circle AoE lightning hits**. Please move out, or dodge them the next time.
 **LVPs** 
-* __Amadila Dur__ did a total of **43.8kdps** (**17%** of the squad). Nice usage of writs!
-## **[LARGOS CM](https://dps.report/ovL9-20250608-203042_twins)** **3m48s (99%:wing:)**
-**MVPs** 
-* __Altheana Dur__ / __Stella Novum__ took **8 dash**, it hurts
-* __Choco Sweat Licker__ stayed inside **tornadoes** for a while
-**LVPs** 
-* __Disabled Code__ thanks for doing **2740** **CC** (**39.1%** of the squad)
-* __Otohime The Dragon__ / __Stolenachievements__ / __Popcorncarry__ did a total of **63.6kdps** (**40%** of the squad). Nice usage of writs!
-* __Stolenachievements__ is pumping **20.6kdps** as **boondps** (**91%** of the top DPS)
-## **[QADIM CM](https://dps.report/pFyu-20250608-203854_qadim)** **6m05s (92%:wing:)**
-**MVPs** 
-* __Stolenachievements__ stood on the boss and did not hit the **pyre**, wtf man
-* __Mesmerizing Minty__ / __Óuro Kronii__ / __Syregoon__ took **2 shockwave**, bind that dodge key please
-* __Fuwawa Ábyssgard__ got hit by **fire drops**.
-* __Stella Novum__ / __Disabled Code__ stood inside the hitbox. Please stay a bit further away.
-* __Óuro Kronii__ forgot to use their **food** and/or **utility**! Please make sure that you refresh before the next boss!
-**LVPs** 
-* Give it up to today's **lamp** & **kite** roles __Fairy Lightning__ / __Stella Novum__ / __Do Not The Dur__! Without them you would be stuck at least 30 minutes in LFG.## W5 - *25m30s*
-## **[SH CM](https://dps.report/jm1O-20250608-204314_sh)** **2m13s (91%:wing:)**
-**MVPs** 
-* __Kiara Waldlicht__ / __Stella Novum__ / __Mordof Ganzol__ didn't do any **CC**
-* __Kiara Waldlicht__ who tried to taste a **wall**, was not delectable
-* __Fairy Nightmare__ / __Stella Novum__ / __Blessed Lucy__ / __Mordof Ganzol__ / __Syregreen__ got corrupted multiple times. Hope everything still went alright.
-**LVPs** 
-* __Disabled Code__ Thank you for doing **3000** total **CC** (**62.1%** of the squad)
-* __Stella Novum__ / __Stolenachievements__ / __Zeryuana Dur__ / __Blessed Lucy__ / __Mordof Ganzol__ did a total of **171.9kdps** (**64%** of the squad). __Stella Novum__ / __Stolenachievements__ / __Blessed Lucy__ used writs!
-* __Stolenachievements__ / __Syregreen__ are pumping **63.0kdps** as **boondps** (**24%** of the squad)
-## **[DHUUM CM](https://dps.report/tsnb-20250608-210625_dhuum)** **6m47s (65%:wing:)**
-**MVPs** 
-* __Wora Chique__ as **DPS** did as much **damage** as __Rrragnarök__ who is **support** as a reminder
-* __Cait The Silent__ / __Mio Armpit Sniffer__ / __Syregreen__ / __Wora Chique__ took **1 cracks**, turn on your monitor chief
-* __Roxy Migûrdia__ / __Rrragnarök__ / __Wora Chique__ took damage from Dhuum's AoE in the middle during **Greater Death Mark** (a.k.a. suck).
-* __Syregreen__ please work on your **Quickness** uptime! It makes everyone attack faster, therefore resulting in a faster and safer encounter!
-* __Roxy Migûrdia__ / __Disabled Code__ please work on your **Alacrity** uptime! It makes skill recharges faster, therefore people can use their high impact skills more often!
-* __Disabled Code__ forgot to use their **food** and/or **utility**! Please make sure that you refresh before the next boss!**LVPs** 
-* __Altheana Dur__ / __Stella Novum__ / __Mio Armpit Sniffer__ did a total of **38.3kdps** (**43%** of the squad). __Stella Novum__ / __Mio Armpit Sniffer__ used writs!
-* __Stella Novum__ / __Spectralcorn__ won the **bomb** lottery today and sure got a lot of them! Thank you for not bombing us!
-## [GREAT MVP : BluenoBaka with 10 titles]
-## [GREAT LVP : kopro with 6 titles]
-## Total time : 59m34s
-## Average wingman grade : 86.62%:wing:
+* __Samara__ thanks for doing **6236** **CC** (**35.4%** of the squad)
+## [GREAT MVP : EISBAER with 7 titles]
+## [GREAT LVP : Mooshh, Dzjudz with 2 titles]
+## Total time : 17m45s
+## Average wingman grade : 67.67%:wing:
